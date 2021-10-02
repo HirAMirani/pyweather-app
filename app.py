@@ -19,11 +19,12 @@ def showWeather():
     location = API_link['name']
     condition = API_link['weather'][0]['main']
     description = API_link['weather'][0]['description']
-    icon = requests.get('http://openweathermap.org/img/wn/10d@2x.png')
+    # url = "http://openweathermap.org/img/wn/10d@2x.png"
+    # icon = requests.get(url)
     temp = str(round(float(API_link['main']['temp'] - 273.15)))
     dt = date.today()
 
-    return render_template('index.html', description=description, dt=dt, icon=icon, location=location, temp=temp)
+    return render_template('index.html', description=description, dt=dt, location=location, temp=temp)
 
 
 app.run()
