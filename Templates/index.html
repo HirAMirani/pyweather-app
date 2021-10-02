@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/8d37418711.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" type="text/css" href="static/css/debug.css">
+</head>
+
+<body>
+    <div class="card-hero">
+        <div class="container">
+            <!-- <nav class="navbar" role="navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="">
+                    <i class="fa fa-cloud"></i>
+                </a>
+             </div>
+        </nav> -->
+            <div class="hero is-primary">
+                <div class="hero-body">
+                    <div class="title">
+                        <h1 class="title is-1">
+                            Weather Updates
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container-body">
+                <div class="card">
+                    <div class="form">
+                        <form action="/" method="POST">
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                    <input class="input" type="text" name="city"
+                                        placeholder="type your city name and hit ENTER" required>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </p>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                    <div class="card-header">
+                        <div class="card-header-title is-centered">
+                            <div class="card-content">
+                                <div class="title is-4">
+                                    {{ location }}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        <div class="card-header-title is-centered">
+                            <div class="card-content">
+                                <div class="title is-1">
+                                    {{ temp }}&deg;C
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card-content  has-text-centered">
+                        <span class="icon">
+                            <i class="fas fa-cloud fa-5x"></i>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="media"></div>
+                        <div class="content has-text-centered">
+                            <div class="crad-content">
+                                <div class="title is-2">
+                                    {{ description }}
+                                </div>
+                            </div>
+
+
+
+                            <div class="card-content">
+                                {{ dt }}
+                            </div>
+                            <!-- <div class="card-footer">
+                            <button onclick="window.setTimeout(function () {  window.location.reload();}, 10000)" class="button is-dark" type="reset" value="Reset">
+                                Refresh
+                            </button>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Made by <b>PY</b> with <b>&#10084;</b> </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

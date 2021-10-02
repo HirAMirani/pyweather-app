@@ -1,0 +1,26 @@
+.card-hero{
+    height:8in;
+    width: auto;
+    background: green url('../hero-1.png');
+}
+.hero{
+    background-color: #eec0c6;
+background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
+}
+.footer{
+    background-color:#3A3B3C;
+    color: #E4E6EB;
+    height: 2em;
+}
+.card{
+    background-color: #eec0c6;
+background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+
+}
+.container{
+    width: 500px;}
+
+body {
+        font-family: "Sofia", sans-serif;
+      }
