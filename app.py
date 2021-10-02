@@ -17,7 +17,7 @@ def showWeather():
         str(city)+'&appid=6020b628fb8a121964998331e3b7e481'
     API_link = requests.get(WEB_link).json()
     location = API_link['name']
-    # condition = API_link['weather'][0]['main']
+    condition = API_link['weather'][0]['main']
     description = API_link['weather'][0]['description']
     icon = requests.get('http://openweathermap.org/img/wn/10d@2x.png')
     temp = str(round(float(API_link['main']['temp'] - 273.15)))
