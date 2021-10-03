@@ -3,6 +3,7 @@ import requests
 from datetime import date
 from datetime import time
 from datetime import datetime
+import os
 
 
 from requests import api
@@ -12,9 +13,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def showWeather():
+    API_KEY = os.environ['weather_forecast']
     city = request.form.get('city')
     WEB_link = 'https://api.openweathermap.org/data/2.5/weather?q=' + \
-        str(city)+'&appid=6020b628fb8a121964998331e3b7e481'
+        str(city)+'&appid=' + API_KEY
     API_link = requests.get(WEB_link).json()
     location = API_link['name']
     condition = API_link['weather'][0]['main']
